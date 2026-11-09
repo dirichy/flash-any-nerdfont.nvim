@@ -3,7 +3,6 @@
 -- All relative paths start at this file's directory, not the shell's working directory.
 -- 所有相对路径均以本文件所在目录为基准。
 return {
-	-- Replace nerdfont with your source name / 将 nerdfont 换成 source 名称。
 	-- Dictionary file / 码表路径。One grapheme per key; codes are inferred automatically.
 	file = "lua/flash-any/tables/nerdfont.tsv",
 
@@ -13,24 +12,24 @@ return {
 	-- format = "tsv", -- auto, rime, tsv, csv, space, fcitx, ibus
 	-- columns = { "text", "code", "weight" }, -- Column order / 列顺序。
 	-- encoding = "UTF-8", -- Input encoding / 原码表编码。
-	-- header = true, -- Skip a TSV/CSV header / 是否有标题行。
+	-- header = true, -- Skip a CSV header / 是否有标题行。
 	-- converter = "converter.lua", -- Build-time code converter / 构建时编码转换。
 
 	-- Name shown in the title and default narration / 标题、默认旁白中的文本名称。
 	-- Omit for "any text" / 省略时使用 "any text"。
-	text_name = "Nerd Font icons",
+	text_name = "Nerdfont",
 	-- First search: one grapheme / 第一次匹配的单字素，不必填写它的编码。
 	-- Omit for a font-checked random entry / 省略时随机抽取字体覆盖的条目。
-	text = "",
+	text = "",
 	-- Second search: mix table text and literal ASCII / 第二次演示码表文字与 ASCII 混输。
 	-- Prefer a distinct phrase; several labels are also allowed / 尽量用独特的短语，也允许多个标签。
 	-- Default / 默认：text .. " with flash"。
-	mixed_text = " with flash",
+	mixed_text = "nerdfont  with flash",
 
 	-- Editable narration, rendered as comments above the examples / 可修改的演示旁白。
 	-- Newlines are supported; omit to use text_name-based defaults / 支持换行，省略则按文本名称生成。
-	comment = "Flash can match Nerd Font icons: type a code, then choose a label.",
-	mixed_comment = "Mix Nerd Font icons codes with ASCII in the same search.",
+	comment = "Flash can match nerdfont: type prefix of a icon name, then choose a label.",
+	mixed_comment = "Mix icon name with ASCII in the same search.",
 
 	-- Optional existing sample file / 可选：直接使用自己的样本文件，保持一屏可见。
 	-- It must contain mixed_text / 文件里须包含混输目标。
